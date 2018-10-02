@@ -1,0 +1,14 @@
+{
+    "version": "0.5",
+    "name": "spamhaus-ee-miner",
+    "author": "Palo Alto Networks",
+    "author_email": "spowers@neulyin.com",
+    "description": "MineMeld node extension for mining Spamhaus EE feeds",
+    "url": "https://github.com/spencerwp/spamhaus-ee-miner",
+    "entry_points": {
+        "minemeld_prototypes": {
+            "spamhauseeminer.prototypes": "spamhauseeminer:prototypes"
+        }
+    },
+    "manifest_version": 0
+}

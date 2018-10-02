@@ -1,0 +1,36 @@
+url: https://www.spamhaus.org/
+description: >
+    The Spamhaus Project is an international nonprofit organization whose
+    mission is to track the Internet's spam operations and sources, to
+    provide dependable realtime anti-spam protection for Internet networks,
+    to work with Law Enforcement Agencies to identify and pursue spam and
+    malware gangs worldwide, and to lobby governments for effective
+    anti-spam legislation.
+prototypes:
+    SPAMHAUS_XBL:
+        author: Spencer Powers
+        development_status: STABLE
+        node_type: miner
+        indicator_types:
+            - IPv4
+        tags:
+            - OSINT
+            - ConfidenceHigh
+            - ShareLevelGreen
+        description: Spamhaus XBL List - CBL (3rd party exploits such as proxies, trojans, etc.)
+        config:
+            source_name: spamhaus.XBL
+            attributes:
+                type: IPv4
+                direction: inbound
+                confidence: 100
+                share_level: green
+            ignore_regex: '^;.*'
+            indicator:
+                regex: '^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+            url: https://minemeld.nhl.net/localfeeds/xbl
+            age_out:
+                default: null
+                sudden_death: true
+                interval: 60
+        class: minemeld.ft.http.HttpFT
