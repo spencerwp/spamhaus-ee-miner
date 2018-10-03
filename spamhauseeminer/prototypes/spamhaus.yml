@@ -33,4 +33,4 @@ prototypes:
                 default: null
                 sudden_death: true
                 interval: 60
-        class: minemeld.ft.http.HttpFT
+        class: spamhauseeminer.SHMiner
