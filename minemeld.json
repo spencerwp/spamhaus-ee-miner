@@ -6,6 +6,9 @@
     "description": "MineMeld node extension for mining Spamhaus EE feeds",
     "url": "https://github.com/spencerwp/spamhaus-ee-miner",
     "entry_points": {
+      "minemeld_nodes": {
+          "spamhauseeminer.SHMiner": "spamhauseeminer.node:SHMiner",
+        },
         "minemeld_prototypes": {
             "spamhauseeminer.prototypes": "spamhauseeminer:prototypes"
         }

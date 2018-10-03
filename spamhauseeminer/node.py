@@ -3,9 +3,7 @@ import logging
 import re
 import itertools
 
-from minemeld import __version__ as MM_VERSION
-
-from . import basepoller
+from minemeld.ft.basepoller import BasePollerFT
 
 LOG = logging.getLogger(__name__)
 
