@@ -5,12 +5,12 @@ import itertools
 
 from minemeld import __version__ as MM_VERSION
 
-from minemeld.ft.basepoller import basepoller
+from minemeld.ft.basepoller import BasePollerFT
 
 LOG = logging.getLogger(__name__)
 
 
-class SHMiner(basepoller.BasePollerFT):
+class SHMiner(BasePollerFT):
     def configure(self):
         super(SHMiner, self).configure()
 
